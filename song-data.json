@@ -1,0 +1,34 @@
+[
+  {
+    "title" : "Bones",
+    "artist" : "Imagine Dragons",
+    "genre" : "Pop Rock",
+    "length" : 2.45,
+    "language" : "English",
+    "released" : "11 March 2022"
+  },
+  {
+    "title" : "Believer",
+    "artist" : "Imagine Dragons",
+    "genre" : "Pop Rock",
+    "length" : 3.24,
+    "language" : "English",
+    "released" : "1 February 2017"
+  },
+  {
+    "title" : "Roar",
+    "artist" : "Katy Perry",
+    "genre" : "Pop",
+    "length" : 3.43,
+    "language" : "English",
+    "released" : "August 10, 2013"
+  },
+  {
+    "title" : "Shake It Off",
+    "artist" : "Taylor Swift",
+    "genre" : "Pop Rock",
+    "length" : 3.39,
+    "language" : "English",
+    "released" : "August 19, 2014"
+  }
+]
