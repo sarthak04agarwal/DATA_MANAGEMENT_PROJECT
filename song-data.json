@@ -30,5 +30,21 @@
     "length" : 3.39,
     "language" : "English",
     "released" : "August 19, 2014"
+  },
+  {
+    "title" : "Three Little Bird",
+    "artist" : "Bob Marley",
+    "genre" : "Alternative rock",
+    "length" : 3.01,
+    "language" : "English",
+    "released" : "12 September 1980"
+  },
+  {
+    "title" : "Clocks",
+    "artist" : "Coldplay",
+    "genre" : "Alternative rock",
+    "length" : 	5.07,
+    "language" : "English",
+    "released" : "11 November 2002"
   }
 ]

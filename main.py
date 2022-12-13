@@ -1,10 +1,11 @@
 import json
 
-file = open("song-data.json", "r")
-dataStr = file.read()
-file.close()
+# Open a file and use json.load to load JSON data from file as data
+with open("song-data.json", "r") as file_ref:
+    song_Data = json.load(file_ref)
 
-song_Data = json.loads(dataStr)
+
+
 
 def display_All():
     for i in range (len(song_Data)):
@@ -15,25 +16,29 @@ def display_All():
         print("language " + song_Data[i]['language'])
         print("released " + song_Data[i]['released'] + "\n")
         
+        
 
 
 menu = ("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
+
 
 
 loop = True
 while(loop):
     selection = input(menu)
     if selection == "1":
-        #display_All()
+        print("H")
     elif selection == "2":
-        #search_contact()
+        print("Hello")
     elif selection == "3":
-        #edit_contact()
+        print("Hello")
     elif selection == "4":
-        #new_contact()
+        print("Hello")
     elif selection == "5":
-        #remove_contact()
+        print("Hello")
     elif selection == "6":
-        #remove_contact()
+        print("Hello")
     else:
-        #loop = False
+        loop = False
+
+
