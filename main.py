@@ -17,9 +17,6 @@ def display_All():
         print("released " + song_Data[i]['released'] + "\n")
         
 
-        
-
-
 menu = ("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
 
 
@@ -28,7 +25,7 @@ loop = True
 while(loop):
     selection = input(menu)
     if selection == "1":
-        print("H")
+        print(display_All)
     elif selection == "2":
         print("Hello")
     elif selection == "3":
