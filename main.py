@@ -17,6 +17,8 @@ def display_All():
         print("Language: " + song_Data[i]['language'])
         print("Released: " + song_Data[i]['released'] + '\n')
 
+def display_Favorite():
+    
 
 menu = ("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
 
@@ -36,6 +38,6 @@ while(loop):
     elif selection == "5":
         print("Hello")
     elif selection == "6":
-        print("Hello")
+        print("Hello ")
     else:
         loop = False
