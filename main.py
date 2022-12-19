@@ -3,9 +3,14 @@ import json
 file = open("song-data.json", "r")
 dataStr = file.read()
 file.close()
-
 song_Data = json.loads(dataStr)
-print(song_Data)
+
+file = open("user-data.json", "r")
+dataStr = file.read()
+file.close()
+
+user_Data = json.loads(dataStr)
+
 
 
 def display_All():
@@ -17,8 +22,9 @@ def display_All():
         print("Language: " + song_Data[i]['language'])
         print("Released: " + song_Data[i]['released'] + '\n')
 
-def display_Favorite():
-    
+
+#def display_Favorite():
+   
 
 menu = ("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
 
