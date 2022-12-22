@@ -28,11 +28,27 @@ def display_All():
 
 menu = ("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
 
+menu2 = ("1. Log in to account\n2. Log out of account\n3. Create new account\n Please type your number: ")
 
+print(user_Data)
+loop2 = True 
+while(loop2):
+    selection2 = input(menu2)
+    if selection2 == "1":
+        usernamein = input("Please enter your new Username: ")
+        passwordin = input("Please enter your password: ")
+        user_Data['username'] = usernamein
+        user_Data['password'] = passwordin
+        print(user_Data)
+    #elif selection2 == "2":
+        #print("Hello")
+    #else:
+        #loop2 = False
 
+'''
 loop = True
 while(loop):
-    selection = input(menu)
+    selection = input(menu2)
     if selection == "1":
         display_All()
     elif selection == "2":
@@ -47,3 +63,4 @@ while(loop):
         print("Hello ")
     else:
         loop = False
+'''
