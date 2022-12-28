@@ -35,6 +35,11 @@ loop2 = True
 while(loop2):
     selection2 = input(menu2)
     if selection2 == "1":
+        usernamelogin = input("Please enter your username: ")
+        passwordlogin = input("Please enter your password: ")
+        user_Data['username'] = usernamein
+        user_Data['password'] = passwordin
+    elif selection2 == "3":
         usernamein = input("Please enter your new Username: ")
         passwordin = input("Please enter your password: ")
         user_Data['username'] = usernamein
