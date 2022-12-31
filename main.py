@@ -1,16 +1,11 @@
 import json
 
-file = open("song-data.json", "r")
-dataStr = file.read()
-file.close()
-song_Data = json.loads(dataStr)
 
-file = open("user-data.json", "r")
-dataStr = file.read()
-file.close()
+with open("song-data.json", "r") as file_ref:
+    song_Data = json.load(file_ref)
 
-user_Data = json.loads(dataStr)
-
+with open("user-data.json", "r") as file_ref:
+    user_Data = json.load(file_ref)
 
 
 def display_All():
@@ -26,29 +21,76 @@ def display_All():
 #def display_Favorite():
    
 
-menu = ("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
+	
+#menu = ("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
 
-menu2 = ("1. Log in to account\n2. Log out of account\n3. Create new account\n Please type your number: ")
 
-print(user_Data)
-loop2 = True 
-while(loop2):
-    selection2 = input(menu2)
-    if selection2 == "1":
-        usernamelogin = input("Please enter your username: ")
-        passwordlogin = input("Please enter your password: ")
-        user_Data['username'] = usernamein
-        user_Data['password'] = passwordin
-    elif selection2 == "3":
-        usernamein = input("Please enter your new Username: ")
-        passwordin = input("Please enter your password: ")
-        user_Data['username'] = usernamein
-        user_Data['password'] = passwordin
-        print(user_Data)
-    #elif selection2 == "2":
-        #print("Hello")
-    #else:
-        #loop2 = False
+loop = True
+loggedIn = False
+loggedInPos = None
+def displayMenu():
+    global loop
+    status = input("\n1. Log in to account\n2. Create new account\n3. Log out of account\n Please type your number: ")
+    if status == "1":
+        oldUser()
+    elif status == "2":
+        newUser()
+    elif status == '3':
+        logOut()
+    else:
+        loop = False
+
+# Method to create a new account
+def newUser():
+    userFound = False
+    createLogin = input("Create login name: ")
+    
+    for i in range(len(user_Data)):
+        if user_Data[i]['username'] == createLogin:
+            userFound = True
+            
+    if userFound:
+        print("User already exists\n")
+    else:
+        createPassw = input("Create password: ")
+        user_Data.append(
+            {
+                "username" : createLogin,
+                "password" : createPassw,
+            }
+        )
+        print("\nUser created\n")
+
+# Method for signing into an account            
+def oldUser():
+    global loggedIn
+    login = input("Enter login name: ")
+    usernameFound = False
+    for i in range(len(user_Data)):
+            if user_Data[i]['username'] == login:
+                passw = input("Enter password: ")
+                if user_Data[i]['password'] == passw:
+                    print("User found. Logged in")
+                    loggedIn = True
+                    usernameFound = True
+                else:
+                    print("Password incorrect")
+                    usernameFound = True
+    if not usernameFound:           
+        print("User not found")
+                    
+# Method to loggout of account        
+def logOut():
+    if loggedIn == True:
+        global loggedIn
+        loggedIn = False
+        print("Logged out successfully.")
+
+
+
+while loop:
+    displayMenu()
+
 
 '''
 loop = True
@@ -69,3 +111,4 @@ while(loop):
     else:
         loop = False
 '''
+
