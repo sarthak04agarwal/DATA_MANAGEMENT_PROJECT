@@ -8,5 +8,9 @@
     "username" : "Sharma21",
     "password" : "Shame200521",
     "faves" : ["Roar", "Shake It Off", "Believer"]
+  },
+  {
+    "username" : "Yo",
+    "password" : "Ma"
   }
 ]
