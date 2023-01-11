@@ -122,6 +122,7 @@ def oldUser():
                     loggedInPos = i
                     usernameFound = True
                     print("User found. Logged in")
+                    print(" ")
                 else:
                     print("Password incorrect")
                     usernameFound = True
@@ -130,13 +131,14 @@ def oldUser():
                     
 # Method to loggout of account        
 def logOut():
+    global loggedIn
     if loggedIn == True:
-        global loggedIn
         loggedIn = False
         global loggedInPos
         loggedInPos = None
         print("Logged out successfully.")
-
+    else:
+        print("Not logged in.")
 
 
 while loop:

@@ -1,16 +1,1 @@
-[
-  {
-    "username" : "Sarthak",
-    "password" : "Sartagarwal1",
-    "faves" : ["Shake It Off", "Clocks"]
-  },
-  {
-    "username" : "Sharma21",
-    "password" : "Shame200521",
-    "faves" : ["Roar", "Shake It Off", "Believer"]
-  },
-  {
-    "username" : "Yo",
-    "password" : "Ma"
-  }
-]
+[{"username": "Sarthak", "password": "Sartagarwal1", "faves": ["Shake It Off", "Clocks"]}, {"username": "Sharma21", "password": "Shame200521", "faves": ["Roar", "Shake It Off", "Believer"]}, {"username": "Yo", "password": "Ma"}, {"username": "Yom", "password": "ama"}]
