@@ -15,7 +15,6 @@ def display_All():
         print("Artist: " + song_Data[i]['artist'])
         print("Genre: " + song_Data[i]['genre'])
         print("Length: " + str(song_Data[i]['length']))
-        print("Language: " + song_Data[i]['language'])
         print("Released: " + song_Data[i]['released'] + '\n')
 
 def add_Favorite():
@@ -55,6 +54,7 @@ loggedInPos = None
 def displayMenu():
     global loop
     status = input("\n1. Log in to account\n2. Create new account\n3. Log out of account\n Please type your number: ")
+    print(" ")
     if status == "1":
         oldUser()
         if(loggedIn):
@@ -71,6 +71,7 @@ def displaySecMenu():
     loop2 = True
     while(loop2):
         selection = input("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
+        print(" ")
         if selection == "1":
             display_All()
         elif selection == "2":
@@ -78,9 +79,9 @@ def displaySecMenu():
         elif selection == "3":
             print("Hello")
         elif selection == "4":
-            print("Hello")
+            add_Favorite()
         elif selection == "5":
-            print("Hello")
+            remove_Favorite()
         elif selection == "6":
             display_Favorite()
         else:
