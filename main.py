@@ -16,6 +16,25 @@ def display_All():
         print("Genre: " + song_Data[i]['genre'])
         print("Length: " + str(song_Data[i]['length']))
         print("Released: " + song_Data[i]['released'] + '\n')
+#def filter_Data():
+
+def myFunc(e):
+  return e['length']
+
+
+def sort_Data():
+    sort =  input("Do you want the Length of the songs in ascending order or descending order? \n1: Ascending order \n2: Descending order \nPlease select a number: ")
+    if sort == '1':
+        song_Data.sort(key=myFunc)
+        print("Data sorted succesfully.")
+        print(" ")
+    elif sort == '2':
+        song_Data.sort(reverse=True, key=myFunc)
+        print("Data sorted succesfully.")
+        print(" ")
+    else:
+        print("Please type one of the numbers above")
+        print(" ")
 
 def add_Favorite():
     if loggedIn:
@@ -49,7 +68,7 @@ def display_Favorite():
 
     
 
-
+# This loop is the main menu that appears in the starting of the program
 loop = True
 loggedIn = False
 loggedInPos = None
@@ -71,6 +90,7 @@ def displayMenu():
         print("Invalid selection. Please select a valid option.")
 
 # Method that displays the second menu 
+# This menu appears once the user has logged into his account from the first menu
 def displaySecMenu():
     loop2 = True
     while(loop2):
@@ -81,7 +101,7 @@ def displaySecMenu():
         elif selection == "2":
             print("Hello")
         elif selection == "3":
-            print("Hello")
+            sort_Data()
         elif selection == "4":
             add_Favorite()
         elif selection == "5":
@@ -148,7 +168,11 @@ def logOut():
         print("Not logged in.")
 
 
+
 while loop:
     displayMenu()
+'''
+# This makes sure that the data that was changed there also gets changed in the actual file
 with open("user-data.json", "w") as file_ref:
     json.dump(user_Data, file_ref)
+'''
