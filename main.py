@@ -27,14 +27,11 @@ def sort_Data():
     if sort == '1':
         song_Data.sort(key=myFunc)
         print("Data sorted succesfully.")
-        print(" ")
     elif sort == '2':
         song_Data.sort(reverse=True, key=myFunc)
         print("Data sorted succesfully.")
-        print(" ")
     else:
         print("Please type one of the numbers above")
-        print(" ")
 
 def add_Favorite():
     if loggedIn:
@@ -61,11 +58,9 @@ def remove_Favorite():
         else:
             print("Please enter one of the numbers above.")
 
-
+# Method that displays the logged in user's favorite songs
 def display_Favorite():
     print(user_Data[loggedInPos]['username'] + "'s Favorites: " + str(user_Data[loggedInPos]['faves']))
-    print(" ")
-
     
 
 # This loop is the main menu that appears in the starting of the program
@@ -94,7 +89,7 @@ def displayMenu():
 def displaySecMenu():
     loop2 = True
     while(loop2):
-        selection = input("1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
+        selection = input("\n1. Display All Data \n2. Display some of the data \n3. Sort the data \n4. Add data to favorite list \n5. Remove data from favorite \n6. Display Favorite List \n7. Exit" + "\n Please type your number: ")
         print(" ")
         if selection == "1":
             display_All()
@@ -112,7 +107,7 @@ def displaySecMenu():
             loop2 = False
         else:
             print("Invalid selection. Please select a valid option.")
-            print(" ")
+            
 
 # Method to create a new account
 def newUser():
@@ -149,7 +144,6 @@ def oldUser():
                     loggedInPos = i
                     usernameFound = True
                     print("User found. Logged in")
-                    print(" ")
                 else:
                     print("Password incorrect")
                     usernameFound = True
