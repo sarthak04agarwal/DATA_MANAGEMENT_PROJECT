@@ -21,7 +21,7 @@ def display_All():
 def myFunc(e):
   return e['length']
 
-
+# Method that sorts the data based on the length of each song, the user can pick whether the list should be sorted in an ascending order or a descending order
 def sort_Data():
     sort =  input("Do you want the Length of the songs in ascending order or descending order? \n1: Ascending order \n2: Descending order \nPlease select a number: ")
     if sort == '1':
@@ -32,7 +32,7 @@ def sort_Data():
         print("Data sorted succesfully.")
     else:
         print("Please type one of the numbers above")
-
+# Method that adds song to a user's favorite list
 def add_Favorite():
     if loggedIn:
         for i in range(len(song_Data)):
@@ -45,6 +45,7 @@ def add_Favorite():
             user_Data[loggedInPos]['faves'].append(song_Data[int(add_Fav)]['title'])
             print(song_Data[add_Fav]['title'] + " has been added to your favorite list.")
 
+# Method that removes a song from the user's favorite list
 def remove_Favorite():
     if loggedIn:
         for i in range(len(user_Data[loggedInPos]['faves'])):
@@ -162,7 +163,7 @@ def logOut():
         print("Not logged in.")
 
 
-
+# This starts everything and display the first menu of the program
 while loop:
     displayMenu()
 '''
