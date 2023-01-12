@@ -44,8 +44,9 @@ def remove_Favorite():
 
 
 def display_Favorite():
-    print(user_Data[loggedInPos]['username'] + "'s Favorites: " + user_Data[loggedInPos]['faves'])
-       
+    print(user_Data[loggedInPos]['username'] + "'s Favorites: " + str(user_Data[loggedInPos]['faves']))
+    #print(user_Data[loggedInPos]['faves'])
+    
 
 
 loop = True
