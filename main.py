@@ -53,7 +53,7 @@ loggedIn = False
 loggedInPos = None
 def displayMenu():
     global loop
-    status = input("\n1. Log in to account\n2. Create new account\n3. Log out of account\n Please type your number: ")
+    status = input("\n1. Log in to account\n2. Create new account\n3. Log out of account\n4. Exit\n Please type your number: ")
     print(" ")
     if status == "1":
         oldUser()
@@ -63,8 +63,10 @@ def displayMenu():
         newUser()
     elif status == '3':
         logOut()
-    else:
+    elif status == '4':
         loop = False
+    else:
+        print("Invalid selection. Please select a valid option.")
 
 # Method that displays the second menu 
 def displaySecMenu():
@@ -84,9 +86,11 @@ def displaySecMenu():
             remove_Favorite()
         elif selection == "6":
             display_Favorite()
-        else:
+        elif selection == '7':
             loop2 = False
-
+        else:
+            print("Invalid selection. Please select a valid option.")
+            print(" ")
 
 # Method to create a new account
 def newUser():
