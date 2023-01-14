@@ -16,7 +16,57 @@ def display_All():
         print("Genre: " + song_Data[i]['genre'])
         print("Length: " + str(song_Data[i]['length']))
         print("Released: " + song_Data[i]['released'] + '\n')
-#def filter_Data():
+
+# Method that filters data based on some criteria
+def filter_Data():
+    status = input("1. Title\n2. Artist\n3. Genre\n4. Length\n5. Released Date\nPlease select the search criteria: ")
+    if status ==  '1':
+        status2 = input("\nPlease enter the Title that you want to search: ")
+        found = False
+        for i in range(len(song_Data)):
+            if song_Data[i]['title'] == status2:
+                found = True
+                print(song_Data[i])
+        if not found:
+            print("Not found.")
+    elif status ==  '2':
+        status2 = input("\nPlease enter the Artist that you want to search: ")
+        found = False
+        for i in range(len(song_Data)):
+            if song_Data[i]['artist'] == status2:
+                found = True
+                print(song_Data[i])
+        if not found:
+            print("Not found.")
+    elif status == '3':
+        status2 = input("\nPlease enter the Genre that you want to search: ")
+        found = False
+        for i in range(len(song_Data)):
+            if song_Data[i]['genre'] == status2:
+                found = True
+                print(song_Data[i])
+        if not found:
+            print("Not found.")
+    elif status == '4':
+        status2 = input("\nPlease enter the Length that you want to search: ")
+        found = False
+        for i in range(len(song_Data)):
+            if str(song_Data[i]['length']) == status2:
+                found = True
+                print(song_Data[i])
+        if not found:
+            print("Not found.")
+    elif status == '5':
+        status2 = input("\nPlease enter the Released Data that you want to search: ")
+        found = False
+        for i in range(len(song_Data)):
+            if song_Data[i]['released'] == status2:
+                found = True
+                print(song_Data[i])
+        if not found:
+            print("Not found.")
+    else:
+        print("Please select a valid option.")
 
 def myFunc(e):
   return e['length']
@@ -95,7 +145,7 @@ def displaySecMenu():
         if selection == "1":
             display_All()
         elif selection == "2":
-            print("Hello")
+            filter_Data()
         elif selection == "3":
             sort_Data()
         elif selection == "4":
