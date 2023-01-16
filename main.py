@@ -237,8 +237,6 @@ def logOut():
 # This starts everything and display the first menu of the program
 while loop:
     displayMenu()
-'''
 # This makes sure that the data that was changed there also gets changed in the actual file
 with open("user-data.json", "w") as file_ref:
     json.dump(user_Data, file_ref)
-'''
