@@ -22,11 +22,16 @@ def filter_Data():
     status = input("1. Title\n2. Artist\n3. Genre\n4. Length\n5. Released Date\nPlease select the search criteria: ")
     if status ==  '1':
         status2 = input("\nPlease enter the Title that you want to search: ")
+        print(" ")
         found = False
         for i in range(len(song_Data)):
             if song_Data[i]['title'] == status2:
                 found = True
-                print(song_Data[i])
+                print("Title: " + song_Data[i]['title'])
+                print("Artist: " + song_Data[i]['artist'])
+                print("Genre: " + song_Data[i]['genre'])
+                print("Length: " + str(song_Data[i]['length']))
+                print("Released: " + song_Data[i]['released'] + '\n')
         if not found:
             print("Not found.")
     elif status ==  '2':
@@ -35,7 +40,11 @@ def filter_Data():
         for i in range(len(song_Data)):
             if song_Data[i]['artist'] == status2:
                 found = True
-                print(song_Data[i])
+                print("Title: " + song_Data[i]['title'])
+                print("Artist: " + song_Data[i]['artist'])
+                print("Genre: " + song_Data[i]['genre'])
+                print("Length: " + str(song_Data[i]['length']))
+                print("Released: " + song_Data[i]['released'] + '\n')
         if not found:
             print("Not found.")
     elif status == '3':
@@ -44,7 +53,11 @@ def filter_Data():
         for i in range(len(song_Data)):
             if song_Data[i]['genre'] == status2:
                 found = True
-                print(song_Data[i])
+                print("Title: " + song_Data[i]['title'])
+                print("Artist: " + song_Data[i]['artist'])
+                print("Genre: " + song_Data[i]['genre'])
+                print("Length: " + str(song_Data[i]['length']))
+                print("Released: " + song_Data[i]['released'] + '\n')
         if not found:
             print("Not found.")
     elif status == '4':
@@ -53,7 +66,11 @@ def filter_Data():
         for i in range(len(song_Data)):
             if str(song_Data[i]['length']) == status2:
                 found = True
-                print(song_Data[i])
+                print("Title: " + song_Data[i]['title'])
+                print("Artist: " + song_Data[i]['artist'])
+                print("Genre: " + song_Data[i]['genre'])
+                print("Length: " + str(song_Data[i]['length']))
+                print("Released: " + song_Data[i]['released'] + '\n')
         if not found:
             print("Not found.")
     elif status == '5':
@@ -62,7 +79,11 @@ def filter_Data():
         for i in range(len(song_Data)):
             if song_Data[i]['released'] == status2:
                 found = True
-                print(song_Data[i])
+                print("Title: " + song_Data[i]['title'])
+                print("Artist: " + song_Data[i]['artist'])
+                print("Genre: " + song_Data[i]['genre'])
+                print("Length: " + str(song_Data[i]['length']))
+                print("Released: " + song_Data[i]['released'] + '\n')
         if not found:
             print("Not found.")
     else:
