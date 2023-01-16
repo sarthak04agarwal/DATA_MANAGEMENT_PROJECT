@@ -89,9 +89,11 @@ def filter_Data():
     else:
         print("Please select a valid option.")
 
+
 # This function is for the sort_Data method
 def myFunc(e):
   return e['length']
+
 
 # Method that sorts the data based on the length of each song, the user can pick whether the list should be sorted in an ascending order or a descending order
 def sort_Data():
@@ -104,6 +106,7 @@ def sort_Data():
         print("Data sorted succesfully.")
     else:
         print("Please type one of the numbers above")
+
 # Method that adds song to a user's favorite list
 def add_Favorite():
     if loggedIn:
@@ -202,6 +205,7 @@ def newUser():
             }
         )
         print("\nUser created\n")
+
 
 # Method for signing into an account            
 def oldUser():
